@@ -4,6 +4,10 @@ const inputSearch = document.querySelector('.input-search');
 const btnTheme = document.getElementById('theme-toggle');
 
 
+window.addEventListener('load', async () => {
+	const data = await useCachedData();
+	showAllCountries(data);
+});
 document.addEventListener('click', async (event) => {
 	const target = event.target;
 	if (target.classList.contains('border-countries')) {
@@ -26,7 +30,12 @@ selectRegion.addEventListener("change", async () => {
 	const data = await useCachedData();
 	getCountries(data);
 });
-
+function showAllCountries(data) {
+	removeAllContent();
+	data.forEach(country => {
+		showCountries(country);
+	});
+}
 
 function switchTheme(inputSearch) {
 	const body = document.body;
