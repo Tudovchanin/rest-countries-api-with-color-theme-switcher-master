@@ -21,10 +21,10 @@ inputSearch.addEventListener('keyup', async (event) => {
 	}
 });
 selectRegion.addEventListener("change", async () => {
-	const data = await useCachedData();
 	const label = document.querySelector('.label');
-	label.classList.add('hidden')
-	getCountries(data)
+	label.classList.add('hidden');
+	const data = await useCachedData();
+	getCountries(data);
 });
 
 
