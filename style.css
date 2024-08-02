@@ -135,7 +135,7 @@ p {
 	justify-content: space-around;
 	flex-wrap: wrap;
 	gap: 5rem;
-	padding: 100px 0 80px;
+	padding-top:100px;
 }
 
 .container-flag-info {
@@ -246,10 +246,7 @@ p {
 }
 
 @media (max-width: 750px) {
-	body {
-		font-size: 16px;
-	}
-
+	
 	p {
 		line-height: 1.9;
 	}
@@ -313,7 +310,6 @@ p {
 
 	.container-flag-details {
 		height: initial;
-		border: solid;
 	}
 
 	.flag-big {
@@ -324,7 +320,6 @@ p {
 		flex-direction: column;
 		gap: 50px;
 		width: 100%;
-		border: solid;
 	}
 
 	.footer-title {
